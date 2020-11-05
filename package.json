@@ -21,8 +21,6 @@
       "requestedExecutionLevel": "requireAdministrator"
     },
     "nsis": {
-      "installerIcon": "src/icon.ico",
-      "uninstallerIcon": "src/icon.ico",
       "uninstallDisplayName": "CPU Monitor",
       "license": "license.txt",
       "oneClick": false,
