@@ -1,6 +1,6 @@
 {
   "name": "cpu-monitor-software",
-  "productName": "cpu-monitor-software",
+  "productName": "CPU Monitor",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
@@ -9,7 +9,25 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "cpu-monitor-software",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "src/icon.ico",
+      "uninstallerIcon": "src/icon.ico",
+      "uninstallDisplayName": "CPU Monitor",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "keywords": [],
   "author": {
@@ -45,6 +63,7 @@
     }
   },
   "dependencies": {
+    "electron-builder": "^22.9.1",
     "electron-squirrel-startup": "^1.0.0",
     "os-utils": "0.0.14"
   },
